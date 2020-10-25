@@ -1,0 +1,459 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+	background-image: url("images/mountains3-min.png");
+	background-repeat: no-repeat;
+	background-color: #95caec;
+	background-attachment: fixed;
+	position: fixed;
+}
+
+p {
+	color: #f7f5ef;
+	font-size: 20px;
+}
+
+h2 {
+	color: white;
+}
+
+.content1 {
+	margin-left: 100px;
+}
+
+#dinur_title {
+	margin-bottom: -50px;
+}
+
+#symbol {
+	float: right;
+	position: relative;
+	width: 29px;
+	height: 59px;
+	margin-top: -5px;
+	margin-right: 60px;
+}
+
+.symbol {
+	display: inline;
+}
+
+.cloud {
+  text-align: center;
+  box-sizing: border-box;
+  width: 150px;
+  height: 150px;
+  padding: 80px 1em 0 1em;
+  margin: 0 100px;
+  position: relative;
+  background-color: #f1f1f1;
+  border-radius: 100% 100% 0 0;
+  float: right;
+  margin-top: 10px;
+  margin-right: -10px;
+}
+
+.cloud::before, .cloud::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	z-index: -1;
+	background-color: #f1f1f1;
+	border-radius: 100%;
+}
+
+.cloud::before {
+  width  : 125px;
+  height : 125px;
+  left    : -80px;
+  border-bottom-right-radius: 0;
+}
+
+.cloud::after {
+  width  : 100px;
+  height : 100px;
+  right   : -60px;
+  border-bottom-left-radius: 0;
+
+}
+
+.main {
+	background-color: #755a3a;
+	text-align: center;
+	width: 500px;
+	height: 100%;
+	opacity: 0.91;
+	padding: 20px;
+	margin-top: 60px;
+	position: relative;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+              0 2px 2px rgba(0,0,0,0.11), 
+              0 4px 4px rgba(0,0,0,0.11), 
+              0 8px 8px rgba(0,0,0,0.11), 
+              0 16px 16px rgba(0,0,0,0.11), 
+              0 32px 32px rgba(0,0,0,0.11);
+}
+
+@media only screen and (max-width: 479px) {
+    .main { width: 90%; }
+}
+
+#text_main {
+	padding: 5px;
+	text-align: center;
+}
+
+.main_img {
+	display: inline;
+	margin-right: 160px;
+}
+
+#honeypot {
+	height: 220px;
+	width: 220px;
+	position: relative;
+	z-index: -1;
+	margin-left: 760px;
+	margin-top: -120px;
+	float: right;
+}
+
+.honeypot {
+	margin-top: -80px;
+}
+
+#giphy3 {
+	position: relative;
+	float: left;
+	margin-left: 500px;
+}
+
+#sorts {
+	width: 400px;
+	height: 250px;
+}
+
+#sorts2 {
+	width: 250px;
+	height: 250px;
+}
+
+#needs {
+	width: 430px;
+	height: 270px;
+}
+
+/*navigation menu*/
+nav {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    width: 319px;
+    display: table;
+    margin: 0 auto;
+    transform: translateY(-50%);
+    margin-top: 5px;
+}
+
+nav a {
+    position: relative;
+    width: 33.333%;
+    display: table-cell;
+    text-align: center;
+    color: #F39C35;
+    text-decoration: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: 0.2s ease color;
+}
+
+nav a:before, nav a:after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.2s ease transform;
+}
+
+nav a:before {
+    top: 0;
+    left: 10px;
+    width: 6px;
+    height: 6px;
+}
+
+nav a:after {
+    top: 5px;
+    left: 18px;
+    width: 4px;
+    height: 4px
+}
+
+nav a:nth-child(1):before {
+    background-color: yellow;
+}
+
+nav a:nth-child(1):after {
+    background-color: red;
+}
+
+nav a:nth-child(2):before {
+    background-color: #00e2ff;
+}
+
+nav a:nth-child(2):after {
+    background-color: #89ff00;
+}
+
+nav a:nth-child(3):before {
+    background-color: purple;
+}
+
+nav a:nth-child(3):after {
+    background-color: palevioletred;
+}
+
+nav a:nth-child(4):before {
+    background-color: green;
+}
+
+nav a:nth-child(4):after {
+    background-color: blue;
+}
+
+#indicator {
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+    transition: 0.2s ease left;
+}
+
+nav a:hover {
+    color: #fff;
+}
+
+nav a:hover:before, nav a:hover:after {
+    transform: scale(1);
+}
+
+nav a:nth-child(1):hover ~ #indicator {
+    background: linear-gradient(130deg, yellow, red);
+}
+
+nav a:nth-child(2):hover ~ #indicator {
+    left: 28%;
+    background: linear-gradient(130deg, #00e2ff, #89ff00);
+}
+
+nav a:nth-child(3):hover ~ #indicator {
+    left: 50%;
+    background: linear-gradient(130deg, purple, palevioletred);
+}
+
+nav a:nth-child(4):hover ~ #indicator {
+    left: 72%;
+    background: linear-gradient(130deg, green, blue);
+}
+
+#ytd-url {
+  display: block;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  padding: 10px 14px;
+  margin: 20px;
+  color: #fff;
+  font-family: Arial;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: #000;
+  border-radius: 4px;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.3);
+  z-index: 125;
+}
+
+#stick {
+	position: relative;
+	margin-top: 30px;
+	margin-left: 30px;
+}
+
+.pics {
+	height: 250px;
+	width: 450px;
+}
+
+.text {
+	max-height: 700px;
+  	max-width: 1500px;
+  	position: relative;
+  	overflow: auto;
+  	border: 2px solid #f3f3f3;
+  	padding-left: 16px;
+ }
+
+/* Track */
+.text::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+.text::-webkit-scrollbar-thumb {
+  background: red; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+.text::-webkit-scrollbar-thumb:hover {
+  background: #b30000; 
+}
+
+
+
+.github-corner:hover .octo-arm { 
+	animation:octocat-wave 560ms ease-in-out
+}
+
+@keyframes octocat-wave {
+	0%,100% {transform:rotate(0)}
+	20%,60%{transform:rotate(-25deg)}
+	40%,80%{transform:rotate(10deg)}
+}
+
+@media (max-width:500px) {
+	.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm {
+		animation:octocat-wave 560ms ease-in-out}
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  transition: opacity 200ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 10;
+  margin-top: -40px;
+}
+
+.overlay .cancel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  cursor: default;
+}
+
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal {
+  margin: 100px auto;
+  padding: 20px;
+  /*opacity: 0.9;*/
+  border: 1px solid #666;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 6px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  position: relative;
+  background-color: #E09133;
+  background-image: url("images/giphy50.gif");
+  background-size: 70px 70px;
+  background-repeat: no-repeat;
+  background-position: right top;  
+}
+
+.modal h2 {
+  margin-top: 0;
+  text-decoration: underline;
+}
+
+.modal .close {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 20px;
+  right: 20px;
+  opacity: 0.8;
+  transition: all 200ms;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #777;
+}
+
+.modal .close:hover {
+  opacity: 1;
+}
+
+.modal .content {
+  max-height: 400px;
+  overflow: auto;
+}
+
+.modal p {
+  margin: 0 0 1em;
+  text-align: center;
+  color: white;
+  font-size: 19px;
+}
+
+.modal p:last-child {
+  margin: 0;
+  font-style: italic;
+  color: white;
+  font-size: 17px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: right;
+  margin-left: -20px;
+}
+
+.footer p {
+	font-size: 15px;
+	font-style: italic;
+}
