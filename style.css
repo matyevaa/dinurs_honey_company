@@ -160,6 +160,7 @@ nav {
     margin: 0 auto;
     transform: translateY(-50%);
     margin-top: 5px;
+    margin-left: -10px;
 }
 
 nav a {
